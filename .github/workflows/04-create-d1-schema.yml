@@ -17,8 +17,8 @@ jobs:
     name: Create schema and table
     steps:
       - uses: actions/checkout@v4
-      #- name: Create D1 Schema
-      #  uses: cloudflare/wrangler-action@v3
+      - name: Create D1 Schema
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           command: |
