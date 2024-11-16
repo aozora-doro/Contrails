@@ -1,5 +1,5 @@
-name: 4. Create D1 Schema
-run-name: Create D1 Schema
+#name: 4. Create D1 Schema
+#run-name: Create D1 Schema
 
 on:
   workflow_dispatch:
@@ -17,8 +17,8 @@ jobs:
     name: Create schema and table
     steps:
       - uses: actions/checkout@v4
-      - name: Create D1 Schema
-        uses: cloudflare/wrangler-action@v3
+      #- name: Create D1 Schema
+      #  uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           command: |
@@ -28,4 +28,4 @@ jobs:
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           command: |
-            d1 execute contrails-auth  --file=./cloudflare-worker/schema.sql
+            d1 execute contrails-auth --remote --file=./cloudflare-worker/schema.sql
