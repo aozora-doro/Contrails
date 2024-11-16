@@ -1,5 +1,5 @@
-#name: 4. Create D1 Schema
-#run-name: Create D1 Schema
+name: 4. Create D1 Schema
+run-name: Create D1 Schema
 
 on:
   workflow_dispatch:
